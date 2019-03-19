@@ -49,6 +49,22 @@ $(document).ready(function(){
 		</form>
 		<div id="test1-success"></div>
 	</div>
+	
+	<div class="main-line"> 
+		<h1>SQL Improvement Logic Test</h1>
+		<br/>
+		<p>The way to improve the SQL given is based on the two points I have given below.
+		<ul>
+			<li>
+				The column selection should reduce alias usage as many as possible. For example, "Jobs.id AS `Jobs__id`". It is not recommended to use alias unless it is some operation like "MAX(Jobs.id) as 'id_max'".
+			</li>
+			<li>
+				The number of tables joining are too many. This query should be separated to different queries to make it faster. It is not advisable to join tables as it is slowing the query process. This 19 tables joined in one query should be split into 19 queries of a table. It queries will be faster.
+			</li>
+		</ul>
+	</div>
+	
+	
 </body>
 
 </html>
